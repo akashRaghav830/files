@@ -1,0 +1,19 @@
+https://drive.google.com/file/d/1NIWldHnYZeId2Z3_0xe6pQDUGxXEs7bR/view?usp=drive_link
+$ sudo apt update
+$ sudo apt full-upgrade
+$ sudo reboot
+$ sudo apt install build-essential linux-headers-$(uname -r) git     (FOR KALI LINUX)
+$ sudo apt install gcc-12 libgcc-12-dev build-essential -y  (FOR UBUNTY)
+ DOWNLOAD VMWARE WORKKSTATION 17.5.1 AND INSTALL IT 
+$ sudo vmware-modconfig --console --install-all    (IGNORFE ALL ERRORS)
+$ cd /tmp
+$ git clone https://github.com/mkubecek/vmware-host-modules.git
+$ cd vmware-host-modules/
+$ vmware --version
+$ git branch --remotes | grep workstation-17
+$ git checkout workstation-17.5.1
+$ tar -cf vmmon.tar vmmon-only/
+$ tar -cf vmnet.tar vmnet-only/
+$ sudo cp -v vmmon.tar vmnet.tar /usr/lib/vmware/modules/source/
+$ sudo vmware-modconfig --console --install-all
+ALLDONE
