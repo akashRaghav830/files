@@ -1,0 +1,35 @@
+nuclie tool commands 
+nuclie -list file.txt -togs lfi
+
+
+commands cload flare ip realy check 
+
+
+dnsrecon -d domain.com
+wafw00f cload flare check
+nmap --script ssl-cert -p 443 111.235.136.33
+
+shodan search ssl.cert.subject.CN:"vodien.com" --fields ip_str | httpx -sc -title -server -td
+
+shodan search ssl.cert.subject.CN:"vodien.com" --fields ip_str | httpx -sc -title -server -td | grep "200"
+
+site name 
+https://favicons.teamtailor-cdn.com/
+https://viewdns.info/
+https://mxtoolbox.com/SuperTool.aspx
+https://securitytrails.com/
+https://accounts.censys.io/
+https://en.fofa.info/
+https://www.zoomeye.ai/
+https://www.virustotal.com/
+
+curl -S "https://virustotal.com/vtapi/v2/domain/report?domain=vodien.com&apikey=5781cad1766680a334adec231a538303a2184680776577b72a529760217213a6" | jq -r '.. | .ip_address? // empty'| grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
+
+
+curl -S "https://virustotal.com/vtapi/v2/domain/report?domain=vodien.com&apikey=5781cad1766680a334adec231a538303a2184680776577b72a529760217213a6" | jq -r '.. | .ip_address? // empty'| grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' | httpx-toolkit -sc -td -title -server
+
+curl -s "https://urlscan.io/api/v1/search/?q=domain:akash.com&size=1000"| jq -r '.results[]?.page.ip? // empty'| grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
+
+
+curl -s "https://urlscan.io/api/v1/search/?q=domain:akash.com&size=1000"| jq -r '.results[]?.page.ip? // empty'| grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'| httpx-toolkit -sc -td -title -server
+
