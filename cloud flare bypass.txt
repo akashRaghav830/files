@@ -1,5 +1,10 @@
-kali linux kali linux repository error fix commands
+kali linux install repository
+$ git clone https://github.com/viny1ic/kali-get
+$ cd kali-get
+$ ./install.sh
+$ ./kali-get.sh
 
+kali linux kali linux repository error fix commands
 cd /etc/apt
 sudo cp trusted.gpg trusted.gpg.d
 this way to automate the process for all keys:
