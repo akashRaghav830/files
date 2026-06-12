@@ -1,3 +1,6 @@
+
+macos ios https://techrechard.com/
+
 https://drive.google.com/file/d/1NIWldHnYZeId2Z3_0xe6pQDUGxXEs7bR/view?usp=drive_link
 $ sudo apt update
 $ sudo apt full-upgrade
